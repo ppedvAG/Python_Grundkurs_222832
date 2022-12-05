@@ -80,3 +80,27 @@ for i in range(0, 10):
 	print(f"Die Zahl ist {i}")
 	print(f"Die Quadrierte Zahl ist {i*i}")
 	print(f"{i}^2={i*i}")
+
+# Übung 1
+# FizzBuzz
+# 1. Schleife schreiben, die von 0 bis inklusive 100 hochzählt
+# 2. Wir müssen in der Schleife jede Zahl auf ihre Teilbarkeit prüfen:
+# Falls sie durch 3 teilbar ist, soll in der Konsole "Fizz" ausgegeben werden
+# Falls sie durch 5 teilbar ist, soll in der Konsole "Buzz" ausgegeben werden
+# Falls sie sowohl durch 3 als auch 5 teilbar ist, soll in der Konsole "FizzBuzz" ausgegeben werden
+# Falls sie weder durch 3 noch 5 teilbar ist, soll die Zahl selbst in der Konsole ausgegeben werden
+# 1
+# 2
+# Fizz
+#  4
+# Buzz
+# ...
+# 14
+# FizzBuzz
+
+# Übung 2
+# Schreibe eine Schleife die dir alle Zahlen von 1 bis 200 zur Verfügung stellt
+# Lass dir jede Zahl erst in der kardinalen und dann daneben in der ordinalen Schreibweise darstellen
+# Zahl + Endung 'st', 'nd', 'rd' oder 'th'
+# 1st, 2nd, 3rd, 4th, ..., 21st, 22nd, 23rd, 24th
+# Bonus: Berücksichtige alle Zahlen die mit 11, 12 oder 13 enden
