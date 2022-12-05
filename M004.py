@@ -97,6 +97,17 @@ for i in range(0, 10):
 # ...
 # 14
 # FizzBuzz
+for i in range(0, 100):
+	if i == 0:
+		print(i)
+	elif i % 3 == 0 and i % 5 == 0:
+		print("FizzBuzz")
+	elif i % 3 == 0:
+		print("Fizz")
+	elif i % 5 == 0:
+		print("Buzz")
+	else:
+		print(i)
 
 # Übung 2
 # Schreibe eine Schleife die dir alle Zahlen von 1 bis 200 zur Verfügung stellt
@@ -104,3 +115,14 @@ for i in range(0, 10):
 # Zahl + Endung 'st', 'nd', 'rd' oder 'th'
 # 1st, 2nd, 3rd, 4th, ..., 21st, 22nd, 23rd, 24th
 # Bonus: Berücksichtige alle Zahlen die mit 11, 12 oder 13 enden
+for i in range(1, 200):
+	if i % 100 == 11 or i % 100 == 12 or i % 100 == 13:
+		print(f"{i}: {i}th")
+	elif i % 10 == 1:
+		print(f"{i}: {i}st")
+	elif i % 10 == 2:
+		print(f"{i}: {i}nd")
+	elif i % 10 == 3:
+		print(f"{i}: {i}rd")
+	else:
+		print(f"{i}: {i}th")
