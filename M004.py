@@ -1,3 +1,4 @@
+import time
 # Schleifen
 # Wenn man etwas mehrmals hintereinander machen möchte
 
@@ -61,6 +62,7 @@ else:
 	print("Schleife fertig")
 
 # fstring
+# Formatted String
 # Code in einen String schreiben
 # Syntax:
 # f"Text1 Text2 {<Code>}"
@@ -145,9 +147,19 @@ print(counter)
 # Stoppuhr
 # Bevor die Minute hochtickt, müssen die Sekunden einmal eine vollkommenen Umdrehung hinter sich gebracht haben
 # time.sleep(Float) Funktion hier nützlich
+for min in range(0, 60):
+	for sec in range(0, 60):
+		print(f"{min}:{sec}")
+		time.sleep(1)  # import time nicht vergessen
 
 # Übung 2:
 # Erstelle eine Schleife die das kleine Einmaleins von 1 bis 10 berechnet, und jeden einzelnen
 # Schritt in der Konsole ausgibt
 # "1 x 1 = 1"
+# ...
+# "5 x 5 = 25"
+# ...
 # "10 x 10 = 100"
+for i in range(1, 11):
+	for j in range(1, 11):
+		print(f"{i}x{j}={i*j}")
