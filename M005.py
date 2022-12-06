@@ -57,3 +57,33 @@ print([wort[0] for wort in text.title() if wort.isupper()])
 # Übung 4
 # Schreibe eine List-Comprehension die aus einem Text alle Wörter nimmt die 3 oder weniger Zeichen haben
 print([wort for wort in text.split(" ") if len(wort) <= 3])
+
+# Match-Case (switch)
+# if/elif/else Konstrukte vereinfachen
+
+# Syntax:
+# match <Variable>
+# 	case <Bedingung>:
+# 		Code
+# 	case <Bedingung>:
+# 		Code
+
+text = "Test"
+if text == "Ein Text":
+	print()
+elif text == "Zwei Text":
+	print()
+elif len(text) >= 5:
+	print()
+else:
+	print()
+
+match text:
+	case "Ein Text":
+		print()
+	case "Zwei Text":
+		print()
+	case _ if len(text) >= 5:  # _ if um andere Bedingungen als == zu benutzen
+		print()
+	case _:  # default case
+		print()
