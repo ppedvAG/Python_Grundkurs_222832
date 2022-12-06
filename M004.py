@@ -126,3 +126,28 @@ for i in range(1, 200):
 		print(f"{i}: {i}rd")
 	else:
 		print(f"{i}: {i}th")
+
+# Verschachtelte Schleifen
+# Schleifen in Schleifen
+# Wenn wir eine Liste von Listen haben, kann man mit dieser Schleife alle Unterlisten iterieren
+verschachtelt = [[1, 2, 3], (4, 5, 6), {7, 8, 9}]
+for collection in verschachtelt:
+	for wert in collection:
+		print(wert)
+
+counter = 0
+for i in range(0, 100):
+	for j in range(0, 100):
+		counter += 1
+print(counter)
+
+# Übung 1:
+# Stoppuhr
+# Bevor die Minute hochtickt, müssen die Sekunden einmal eine vollkommenen Umdrehung hinter sich gebracht haben
+# time.sleep(Float) Funktion hier nützlich
+
+# Übung 2:
+# Erstelle eine Schleife die das kleine Einmaleins von 1 bis 10 berechnet, und jeden einzelnen
+# Schritt in der Konsole ausgibt
+# "1 x 1 = 1"
+# "10 x 10 = 100"
