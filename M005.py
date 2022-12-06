@@ -42,12 +42,18 @@ print([wort.lower().replace("ä", "ae").replace("ö", "oe").replace("ü", "ue").
 # Schreibe eine List-Comprehension die nur Zahlen aus einer Range von 1 bis inklusive 30 in die neue Liste packt,
 # falls die Zahl durch 6 teilbar ist
 # Bevor die Zahl in die neue Liste gepackt wird, soll sie um 12 erhöht werden
+print([num + 12 for num in range(1, 31) if num % 6 == 0])
 
 # Übung 2
 # Schreibe eine List-Comprehension die aus einem Text alle Kleinbuchstaben nimmt und Groß in die Liste schreibt
+text = "Ich bin ein Text"
+print([b.upper() for b in text if b.islower()])
 
 # Übung 3
 # Schreibe eine List-Comprehension die aus einem Text alle Anfangsbuchstaben nimmt
+print([wort[0] for wort in text.split(" ")])
+print([wort[0] for wort in text.title() if wort.isupper()])
 
 # Übung 4
 # Schreibe eine List-Comprehension die aus einem Text alle Wörter nimmt die 3 oder weniger Zeichen haben
+print([wort for wort in text.split(" ") if len(wort) <= 3])
