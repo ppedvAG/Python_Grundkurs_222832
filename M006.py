@@ -135,10 +135,36 @@ def passTest():
 # Übung 1:
 # Wir wollen eine Funktion erstellen, die beliebig viele Zahlen als Parameter erhalten kann
 # Und uns die größte dieser Zahlen zurückgibt
+def Max(*numbers):
+	m = 0  # numbers[0] um auch negative Zahlen zu berücksichtigen
+	for i in numbers:
+		if i > m:
+			m = i
+	return m
+
+def Maximum(*numbers):
+	return max(numbers)
 
 # Übung 2:
-# Wir wollen eine Funktion erstellen, die einen String als Paramter erhält
+# Wir wollen eine Funktion erstellen, die einen String als Parameter erhält
 # Die Funktion soll dann in der Konsole ausgeben, aus wie vielen Klein- und Großbuchstaben der String besteht
 # Bonus: Die Funktion soll zusätzlich zählen wie viele Sonderzeichen (Nummern inkludiert) enthalten sind und das
 # ebenfalls ausgeben
 # Sonderzeichen: 4 | Groß: 3 | Klein: 12
+
+def countCase(text: str):
+	lower, upper, special = 0, 0, 0
+	for char in text:
+		if char.islower():
+			lower += 1
+		elif char.isupper():
+			upper += 1
+		else:
+			special += 1
+	print(f"Sonderzeichen: {special} | Groß: {upper} | Klein: {lower}")
+
+countCase("Ein Text")
+
+text = "5"
+if text.upper() == text.lower():  # Sonderzeichen überprüfen
+	print("Sonderzeichen")
