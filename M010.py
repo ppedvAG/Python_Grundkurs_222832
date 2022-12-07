@@ -53,9 +53,10 @@ lw = Lebewesen("Name")
 # Übung:
 # Erstelle eine Klasse Fahrzeug
 # Sie soll über die folgenden Properties verfügen:
-# Motorstatus: bool
+# Motorstatus: bool -> Gibt an ob der Motor gestartet ist oder nicht
 # maximale Geschwindigkeit: int
 # derzeitige Geschwindigkeit: int
+# Sie soll die __init__ Methode implementieren mit den obigen Parametern
 # Sie soll die __str__ Methode implementieren
 # Sie soll eine beschleunigung Methode implementieren, diese akzeptiert einen Parameter, die neue Geschwindigkeit
-# Wenn die neue Geschwindigkeit <= maximale Geschwindigkeit ist, soll die derzeitige Geschwindigkeit angepasst werden
+# Wenn die neue Geschwindigkeit <= maximale Geschwindigkeit ist und der Motor gestartet ist, soll die derzeitige Geschwindigkeit angepasst werden
