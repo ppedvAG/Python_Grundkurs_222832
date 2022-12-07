@@ -25,6 +25,9 @@ class Lebewesen:
 # Mensch erbt name und bewegen(int) von Lebewesen
 class Mensch(Lebewesen):
 	alter = 0
+	"""
+	Variablen können auch beschrieben werden
+	"""
 
 	# Überschreibe die Implementation in Lebewesen
 	def __init__(self, name: str, alter: int):
@@ -62,7 +65,17 @@ lw = Lebewesen("Name")
 # Wenn die neue Geschwindigkeit <= maximale Geschwindigkeit ist und der Motor gestartet ist, soll die derzeitige Geschwindigkeit angepasst werden
 
 class Fahrzeug:
-	def __init__(self, motorstatus, maxV, aktV):
+	"""
+	Die Fahrzeug Klasse aus der Übung. Sie kann beschleunigen.
+	"""
+	def __init__(self, motorstatus: bool, maxV: int, aktV: int):
+		"""
+		Hier werden die Standardwerte gesetzt, Motorstatus muss True sein damit die aktV gesetzt wird (sonst ist aktV 0).
+
+		:param motorstatus: Ob der Motor läuft oder nicht (bool)
+		:param maxV: Die maximale Geschwindigkeit (int)
+		:param aktV: Die aktuelle Geschwindigkeit (int)
+		"""
 		self.motorstatus = motorstatus
 		self.maxV = maxV
 		if motorstatus:
@@ -70,10 +83,23 @@ class Fahrzeug:
 		else:
 			self.aktV = 0
 
+
 	def __str__(self):
+		"""
+		Gibt das Objekt schön formatiert zurück.
+
+		:return: Das Objekt formatiert als String.
+		"""
 		return f"Das Fahrzeug hat eine Maximalgeschwindigkeit von {self.maxV}, es fährt gerade ({self.motorstatus}) und fährt {self.aktV}km/h."
 
+
 	def beschleunige(self, v: int):
+		"""
+		Beschleunigt das Fahrzeug um die angegebene Geschwindikeit (v). V kann auch negativ sein.
+		Das Fahrzeug kann nicht über die Maximalgeschwindigkeit beschleunigen und nicht unter 0km/h bremsen.
+
+		:param v: Die Geschwindigkeit die aufaddiert werden soll.
+		"""
 		if self.motorstatus:
 			if self.aktV + v > self.maxV:
 				print("Zu hoch")
@@ -87,3 +113,9 @@ class Fahrzeug:
 fzg = Fahrzeug(True, 300, 0)
 fzg.beschleunige(200)
 print(fzg)
+
+# docstring
+# Um Code zu beschreiben
+# Wird unter Klassen-/Variablen- und Funktionsdefinitionen geschrieben
+# Wird mit """ geöffnet und mit """ geschlossen
+# In großen Projekten sehr relevant, damit jedem Mitarbeiter bekannt ist was der Code tut
