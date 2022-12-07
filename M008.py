@@ -75,5 +75,15 @@ print(numListConvert)
 # Übung:
 # Funktion die dem User die Möglichkeiten (w, r, a) gibt
 # User soll eine davon auswählen über input()
-# Wenn der User keine valide Möglichkeit eingibt, soll die Eingabe wiederholt werden
+# Wenn der User keine valide Möglichkeit eingibt, soll die Eingabe wiederholt werden bis der User eine valide Eingabe eingibt
 # Danach soll einfach das File geöffnet werden
+def auswahl():
+	while True:  # Endlosschleife bis der User etwas korrektes eingibt
+		choice = input("Gib w, r oder a ein: ")
+		# if choice == "w" or choice == "r" or choice == "a":
+		if choice in ["w", "r", "a"]:  # in statt if/or
+			break
+	print("Valide Eingabe, File wird geöffnet")
+	return open("Test.txt", choice)
+
+auswahl()
