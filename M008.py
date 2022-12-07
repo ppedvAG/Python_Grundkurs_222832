@@ -71,3 +71,9 @@ print(jsonString)
 
 numListConvert = json.loads(jsonString)
 print(numListConvert)
+
+# Übung:
+# Funktion die dem User die Möglichkeiten (w, r, a) gibt
+# User soll eine davon auswählen über input()
+# Wenn der User keine valide Möglichkeit eingibt, soll die Eingabe wiederholt werden
+# Danach soll einfach das File geöffnet werden
