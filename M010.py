@@ -60,3 +60,30 @@ lw = Lebewesen("Name")
 # Sie soll die __str__ Methode implementieren
 # Sie soll eine beschleunigung Methode implementieren, diese akzeptiert einen Parameter, die neue Geschwindigkeit
 # Wenn die neue Geschwindigkeit <= maximale Geschwindigkeit ist und der Motor gestartet ist, soll die derzeitige Geschwindigkeit angepasst werden
+
+class Fahrzeug:
+	def __init__(self, motorstatus, maxV, aktV):
+		self.motorstatus = motorstatus
+		self.maxV = maxV
+		if motorstatus:
+			self.aktV = aktV
+		else:
+			self.aktV = 0
+
+	def __str__(self):
+		return f"Das Fahrzeug hat eine Maximalgeschwindigkeit von {self.maxV}, es fährt gerade ({self.motorstatus}) und fährt {self.aktV}km/h."
+
+	def beschleunige(self, v: int):
+		if self.motorstatus:
+			if self.aktV + v > self.maxV:
+				print("Zu hoch")
+			elif self.aktV + v < 0:
+				print("Zu niedrig")
+			else:
+				self.aktV += v
+		else:
+			print("Motor nicht gestartet")
+
+fzg = Fahrzeug(True, 300, 0)
+fzg.beschleunige(200)
+print(fzg)
